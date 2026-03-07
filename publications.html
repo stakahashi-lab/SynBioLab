@@ -1,80 +1,437 @@
 <!DOCTYPE HTML>
-<!--
--->
 <html>
 	<head>
-		<title>SybBioLab. - Publications</title>
+		<title>SynBioLab. - Publications</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			.pub-year-section { margin-bottom: 2.5em; }
+			.pub-year-heading {
+				font-size: 1.4em;
+				font-weight: 700;
+				color: #3d4449;
+				border-bottom: 3px solid #0068B7;
+				padding-bottom: 0.3em;
+				margin-bottom: 1em;
+			}
+			.pub-list { list-style: none; padding: 0; margin: 0; }
+			.pub-item {
+				padding: 1.1em 0 1.1em 0;
+				border-bottom: 1px solid #e8e8e8;
+				line-height: 1.7;
+			}
+			.pub-item:last-child { border-bottom: none; }
+			.pub-title {
+				font-size: 1.0em;
+				font-weight: 600;
+				color: #3d4449;
+				margin-bottom: 0.2em;
+			}
+			.pub-authors {
+				font-size: 0.9em;
+				color: #555;
+				margin-bottom: 0.15em;
+			}
+			/* 筆頭著者 */
+			.pub-authors .author-me {
+				font-weight: 700;
+				color: #0068B7;
+				text-decoration: underline dotted;
+			}
+			/* 責任著者 */
+			.pub-authors .author-me-corr {
+				font-weight: 700;
+				color: #0068B7;
+				text-decoration: underline dotted;
+			}
+			.pub-authors .author-me-corr::after {
+				content: "*";
+				font-size: 0.85em;
+				vertical-align: super;
+				color: #0068B7;
+			}
+			.pub-journal { font-size: 0.9em; color: #666; font-style: italic; margin-bottom: 0.3em; }
+			.pub-links { display: flex; flex-wrap: wrap; gap: 0.4em; margin-top: 0.4em; align-items: center; }
+			.pub-link {
+				display: inline-block;
+				padding: 0.15em 0.7em;
+				border-radius: 3px;
+				font-size: 0.78em;
+				font-weight: 600;
+				text-decoration: none;
+				border: 1.5px solid #0068B7;
+				color: #0068B7 !important;
+				transition: background 0.2s, color 0.2s;
+			}
+			.pub-link:hover { background: #0068B7; color: #fff !important; }
+			.badge-hot {
+				display: inline-block;
+				background: #d94f00;
+				color: #fff;
+				font-size: 0.72em;
+				font-weight: 700;
+				padding: 0.12em 0.55em;
+				border-radius: 3px;
+				letter-spacing: 0.03em;
+			}
+			.pub-intro {
+				background: #f4f8fc;
+				border-left: 4px solid #0068B7;
+				padding: 0.9em 1.2em;
+				margin-bottom: 2em;
+				font-size: 0.93em;
+				color: #555;
+				border-radius: 0 4px 4px 0;
+			}
+			.legend {
+				font-size: 0.82em;
+				color: #666;
+				margin-bottom: 1.8em;
+				padding: 0.6em 0.9em;
+				background: #f9f9f9;
+				border-radius: 4px;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6em 1.5em;
+				align-items: center;
+			}
+			.legend-item { display: flex; align-items: center; gap: 0.3em; }
+			.legend-dot-me {
+				display: inline-block;
+				width: 10px; height: 10px;
+				background: #0068B7;
+				border-radius: 50%;
+			}
+			.pub-type-book { color: #888; font-size: 0.8em; font-weight:600; }
+		</style>
 	</head>
 	<body class="is-preload">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<header id="header">
+						<a href="index.html" class="logo"><strong>TAKAHASHI LAB</strong> by TDU&nbsp;Life Sciences and Engineering</a>
+					</header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+					<section>
+						<header class="main">
+							<h2>Publications</h2>
+						</header>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-
-							<!-- Header -->
-								<header id="header">
-									<a href="home.html" class="logo"><strong>TAKAHASHI  LAB</strong> by TDU&nbsp;Life Sciences and Engineering</a>
-								</header>
-
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h2>Research Publications</h2>
-									</header> 
-									<ol>
-											研究業績に関しましては下記のリンクを参照してください.
-										    <li>研究者情報DB <a href="https://ra-data.dendai.ac.jp/tduhp/KgApp/k03/resid/S000032">https://ra-data.dendai.ac.jp/tduhp/KgApp/k03/resid/S000032</a> </li>
-											<li>Google Scholar <a href="https://scholar.google.com/citations?user=9OEWO_4AAAAJ&hl=ja">https://scholar.google.com/citations?user=9OEWO_4AAAAJ&hl=ja</a> </li>
-									</ol>
-								
-								</section>
-
+						<div class="pub-intro">
+							Full list also available on:
+							<a href="https://scholar.google.com/citations?user=9OEWO_4AAAAJ&hl=ja" target="_blank" style="color:#0068B7;font-weight:600;">Google Scholar</a>
 						</div>
-					</div>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="home.html">Home</a></li>
-										<li><a href="people.html">people&nbsp;</a></li>
-										<li><a href="research.html">Research</a></li>
-										<li><a href="publications.html">Publications&nbsp;</a></li>
-										<li><a href="education.html">Education</a></li>
-										<li><a href="contact.html">Contact</a></li>
-										<li><a href="Links.html">Links</a></li>
-									</ul>
-								</nav>
-
-							<!-- Section -->
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; TAKAHASHI LAB. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-
+						<div class="legend">
+							<div class="legend-item">
+								<span class="legend-dot-me"></span>
+								<span><strong style="color:#0068B7;">S. Takahashi</strong> = 筆頭著者 &nbsp;|&nbsp; <strong style="color:#0068B7;">S. Takahashi*</strong> = 責任著者（* corresponding author）</span>
+							</div>
 						</div>
-					</div>
 
+						<!-- 2025–2026 -->
+						<div class="pub-year-section">
+							<div class="pub-year-heading">2025–2026</div>
+							<ul class="pub-list">
+
+								<li class="pub-item">
+									<div class="pub-title">Enhanced Protein Synthesis from Immobilized Circular DNA via Triple-Helix Formation</div>
+									<div class="pub-authors">
+										<span class="author-me-corr">S. Takahashi</span>,
+										K. Hayashi, J. Okada, H. Takashima, K. Nakata, M. Oshige, S. Katsura
+									</div>
+									<div class="pub-journal">Analyst (Royal Society of Chemistry)</div>
+									<div class="pub-links">
+										<a class="pub-link" href="https://doi.org/10.1039/D5AN00995B" target="_blank">DOI</a>
+										<span class="badge-hot">🔥 HOT Article 2025</span>
+									</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Ridaifen derivatives function as potent lysosomotropic agents, depending on their basic side chains</div>
+									<div class="pub-authors">
+										Y. Semba, K. Komukai, E. Murata, F. Sato, A. Yoneoka, T. Murata, H. Fukazawa, I. Shiina,
+										<span class="author-me">S. Takahashi</span>,
+										Y. Nagahara
+									</div>
+									<div class="pub-journal">European Journal of Pharmacology 1005 (178082)</div>
+									<div class="pub-links">
+										<a class="pub-link" href="https://doi.org/10.1016/j.ejphar.2025.178082" target="_blank">DOI</a>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+
+						<!-- 2024 -->
+						<div class="pub-year-section">
+							<div class="pub-year-heading">2024</div>
+							<ul class="pub-list">
+
+								<li class="pub-item">
+									<div class="pub-title">Synthesis of BODIPY FL-tethered ridaifen-B, RID-B-BODIPY, and its localization in cancer cells</div>
+									<div class="pub-authors">
+										T. Murata, K. Komukai, Y. Semba, E. Murata, F. Sato, T. Takano, K. Tsuchiya, C. Matsuda, A. Sakai, A. Yoneoka,
+										<span class="author-me">S. Takahashi</span>,
+										Y. Nagahara, I. Shiina
+									</div>
+									<div class="pub-journal">Frontiers in Chemistry 12 (1451468)</div>
+									<div class="pub-links">
+										<a class="pub-link" href="https://doi.org/10.3389/fchem.2024.1451468" target="_blank">DOI</a>
+									</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Production of recombinant intact and N-terminal truncated lipoxygenase isozyme III expressed in Saccharomyces cerevisiae and its influence on glutenin polypeptides</div>
+									<div class="pub-authors">
+										M. Oshige, Y. Sano, <span class="author-me">S. Takahashi</span>, S. Katsura
+									</div>
+									<div class="pub-journal">Food Chemistry: Molecular Sciences 8 (100195), 1–7</div>
+									<div class="pub-links">
+										<a class="pub-link" href="https://doi.org/10.1016/j.fochms.2024.100195" target="_blank">DOI</a>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+
+						<!-- 2022–2023 -->
+						<div class="pub-year-section">
+							<div class="pub-year-heading">2022–2023</div>
+							<ul class="pub-list">
+
+								<li class="pub-item">
+									<div class="pub-title">A new fluorescence labeling method for molecular analysis of double-stranded DNA</div>
+									<div class="pub-authors">
+										<span class="author-me-corr">S. Takahashi</span>,
+										M. Oshige, S. Katsura, Y. Nagahara
+									</div>
+									<div class="pub-journal">Analytical Biochemistry 662, 115000</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">c-kit inhibitor masitinib induces reactive oxygen species-dependent apoptosis in c-kit-negative HepG2 cells</div>
+									<div class="pub-authors">Y. Semba, K. Komukai, T. Murata, H. Fukazawa, I. Shiina, <span class="author-me">S. Takahashi</span>, Y. Nagahara</div>
+									<div class="pub-journal">European Journal of Pharmacology 931 (1), 175183</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Machine learning discovery of missing links that mediate alternative branches to plant alkaloids</div>
+									<div class="pub-authors">T. Watanabe, ..., <span class="author-me">S. Takahashi</span>, et al.</div>
+									<div class="pub-journal">Nature Communications 13, 1405</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Azoxystrobin Induces Apoptosis and Cell Cycle Arrest in Human Leukemia Cells Independent of p53 Expression</div>
+									<div class="pub-authors">Y. Semba, ..., <span class="author-me">S. Takahashi</span>, Y. Nagahara</div>
+									<div class="pub-journal">Anticancer Research 42 (3), 1307–1312</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">低周波交流電界印加によるタンパク質固定のリアルタイム解析</div>
+									<div class="pub-authors">K. Hayashi, R. Hiraga, <span class="author-me-corr">S. Takahashi</span>, M. Oshige, S. Katsura</div>
+									<div class="pub-journal">静電気学会誌 42 (1), 14–19</div>
+								</li>
+
+							</ul>
+						</div>
+
+						<!-- 2019–2021 -->
+						<div class="pub-year-section">
+							<div class="pub-year-heading">2019–2021</div>
+							<ul class="pub-list">
+
+								<li class="pub-item">
+									<div class="pub-title">DNA Manipulation and Single-Molecule Imaging</div>
+									<div class="pub-authors">
+										<span class="author-me-corr">S. Takahashi</span>,
+										M. Oshige, S. Katsura
+									</div>
+									<div class="pub-journal">Molecules 26 (4), 1050</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Mechanism-based tuning of insect 3,4-dihydroxyphenylacetaldehyde synthase for synthetic bioproduction of benzylisoquinoline alkaloids</div>
+									<div class="pub-authors">M. E. Lichman, ..., <span class="author-me">S. Takahashi</span>, et al.</div>
+									<div class="pub-journal">Nature Communications 10 (1), 2015</div>
+								</li>
+
+							</ul>
+						</div>
+
+						<!-- 2014–2018 -->
+						<div class="pub-year-section">
+							<div class="pub-year-heading">2014–2018</div>
+							<ul class="pub-list">
+
+								<li class="pub-item">
+									<div class="pub-title">A New Method for Immobilization of His-Tagged Proteins with the Application of Low-Frequency AC Electric Field</div>
+									<div class="pub-authors">
+										<span class="author-me-corr">S. Takahashi</span>,
+										K. Kishi, R. Hiraga, K. Hayashi, Y. Mamada, M. Oshige, S. Katsura
+									</div>
+									<div class="pub-journal">Sensors 18 (3), 784</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Direct single-molecule observations of DNA unwinding by SV40 large tumor antigen under a negative DNA supercoil state</div>
+									<div class="pub-authors">
+										<span class="author-me-corr">S. Takahashi</span>,
+										S. Motooka, S. Kawasaki, H. Kurita, T. Mizuno, S. Matsuura, F. Hanaoka, A. Mizuno, M. Oshige, S. Katsura
+									</div>
+									<div class="pub-journal">Journal of Biomolecular Structure and Dynamics 36, 32–44</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">高電圧パルス印加による「その場」タンパク質抽出固定化技術の開発</div>
+									<div class="pub-authors"><span class="author-me-corr">S. Takahashi</span>, H. Miyata, M. Oshige, S. Katsura</div>
+									<div class="pub-journal">静電気学会誌 41 (1), 2–7</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">静電技術を用いたグルコース燃料電池の電極作成</div>
+									<div class="pub-authors">M. Oshige, ..., <span class="author-me">S. Takahashi</span>, S. Katsura</div>
+									<div class="pub-journal">静電気学会誌 40, 245–250</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Direct single-molecule observations of local denaturation of a DNA double helix under a negative supercoil state</div>
+									<div class="pub-authors">
+										<span class="author-me-corr">S. Takahashi</span>,
+										S. Motooka, T. Usui, S. Kawasaki, H. Miyata, H. Kurita, T. Mizuno, S. Matsuura, A. Mizuno, M. Oshige, S. Katsura
+									</div>
+									<div class="pub-journal">Analytical Chemistry 87 (6), 3490–3497</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Real-time Single-Molecule Observations of T7 Exonuclease Activity in a Microflow Channel</div>
+									<div class="pub-authors">
+										<span class="author-me-corr">S. Takahashi</span>,
+										T. Usui, S. Kawasaki, H. Miyata, H. Kurita, S. Matsuura, A. Mizuno, M. Oshige, S. Katsura
+									</div>
+									<div class="pub-journal">Analytical Biochemistry 457, 24–30</div>
+								</li>
+
+							</ul>
+						</div>
+
+						<!-- 2012–2013 -->
+						<div class="pub-year-section">
+							<div class="pub-year-heading">2012–2013</div>
+							<ul class="pub-list">
+
+								<li class="pub-item">
+									<div class="pub-title">A New Direct Single-Molecule Observation Method for DNA Synthesis Reaction Using Fluorescent Replication Protein A</div>
+									<div class="pub-authors">
+										<span class="author-me-corr">S. Takahashi</span>,
+										S. Kawasaki, H. Miyata, H. Kurita, T. Mizuno, S. Matsuura, A. Mizuno, M. Oshige, S. Katsura
+									</div>
+									<div class="pub-journal">Sensors 14, 5174–5182</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Single-Molecule Observations of the Interaction between an ssDNA-Binding Protein and a DNA Duplex in a Micro-Flow Channel</div>
+									<div class="pub-authors">
+										<span class="author-me-corr">S. Takahashi</span>,
+										S. Kawasaki, K. Yamaguchi, H. Miyata, H. Kurita, T. Mizuno, S. Matsuura, A. Mizuno, M. Oshige, S. Katsura
+									</div>
+									<div class="pub-journal">Journal of Fluorescence 23 (4), 635–640</div>
+								</li>
+
+								<li class="pub-item">
+									<div class="pub-title">Immobilization of His-Tagged Proteins on Various Solid Surfaces Using NTA-Modified Chitosan</div>
+									<div class="pub-authors">H. Miyata, ..., <span class="author-me">S. Takahashi</span>, M. Oshige, S. Katsura</div>
+									<div class="pub-journal">Open Journal of Polymer Chemistry 03 (01), 6–10</div>
+								</li>
+
+							</ul>
+						</div>
+
+						<!-- 著書・寄稿 -->
+						<div class="pub-year-section">
+							<div class="pub-year-heading">著書・寄稿</div>
+							<ul class="pub-list">
+
+								<li class="pub-item">
+									<span class="pub-type-book">[著書]</span>
+									<div class="pub-title">スマートセルインダストリー―微生物細胞を用いた物質生産の展望― (pp. 19–25)</div>
+									<div class="pub-authors"><span class="author-me">S. Takahashi</span>, et al.</div>
+									<div class="pub-journal">(共著) 2018/06</div>
+								</li>
+
+								<li class="pub-item">
+									<span class="pub-type-book">[寄稿]</span>
+									<div class="pub-title">実学がつなぐ工学と生命科学 東京電機大学・合成生物学研究室</div>
+									<div class="pub-authors"><span class="author-me-corr">S. Takahashi</span></div>
+									<div class="pub-journal">生物工学会誌 104 (1), 38 — Branch Spirit 東日本支部 (単著) 2026/01/25</div>
+									<div class="pub-links">
+										<a class="pub-link" href="https://doi.org/10.34565/seibutsukogaku.104.1_38" target="_blank">DOI</a>
+									</div>
+								</li>
+
+								<li class="pub-item">
+									<span class="pub-type-book">[寄稿]</span>
+									<div class="pub-title">バイオものづくりへの期待ー合成生物学の新展開ー</div>
+									<div class="pub-authors"><span class="author-me-corr">S. Takahashi</span></div>
+									<div class="pub-journal">月刊金融ジャーナル 66 (11) (単著) 2025/11/01</div>
+								</li>
+
+								<li class="pub-item">
+									<span class="pub-type-book">[寄稿]</span>
+									<div class="pub-title">DNAに焦点を当てた1分子蛍光イメージング解析法の開発</div>
+									<div class="pub-authors"><span class="author-me-corr">S. Takahashi</span></div>
+									<div class="pub-journal">アグリバイオ (単著) 2022/10/24</div>
+								</li>
+
+								<li class="pub-item">
+									<span class="pub-type-book">[寄稿]</span>
+									<div class="pub-title">DNA分子の物理的形態操作技術と１分子蛍光イメージングへの応用</div>
+									<div class="pub-authors"><span class="author-me-corr">S. Takahashi</span></div>
+									<div class="pub-journal">月刊「細胞」2022年10月号 (単著) 2022/09/24</div>
+								</li>
+
+								<li class="pub-item">
+									<span class="pub-type-book">[寄稿]</span>
+									<div class="pub-title">電界印加による分子・生体分子操作―タンパク質分子の固定化技術―</div>
+									<div class="pub-authors"><span class="author-me">S. Takahashi</span>, et al.</div>
+									<div class="pub-journal">静電気学会誌 42 (4), 168–173 (共著) 2018/07</div>
+								</li>
+
+							</ul>
+						</div>
+
+					</section>
+				</div>
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<div class="inner">
+					<nav id="menu">
+						<header class="major"><h2>Menu</h2></header>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="people.html">People</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="publications.html">Publications</a></li>
+							<li><a href="education.html">Education</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="Links.html">Links</a></li>
+						</ul>
+					</nav>
+					<footer id="footer">
+						<p class="copyright">&copy; Copyright 2026 Takahashi Shunsuke. Hosted by <a href="https://pages.github.com" target="_blank">GitHub Pages</a>. Last updated: March 2026.</p>
+					</footer>
+				</div>
+			</div>
+		</div>
 
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
